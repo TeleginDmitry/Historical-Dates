@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Исторические даты</title>
+  </head>
+  <body>
+    <main
+      class="relative container flex flex-col justify-between mx-auto min-h-dvh border-l border-r border-primary pb-8 pt-10 sm:pt-16"
+    >
+      <header class="flex items-center gap-16 px-5 sm:px-0">
+        <div class="w-1 h-20 bg-blue-pink hidden sm:block"></div>
+        <h1 class="font-bold text-responsive-secondary text-third">
+          Исторические даты
+        </h1>
+      </header>
+      <section
+        id="circle-wrapper"
+        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      >
+        <div
+          id="circle"
+          class="w-[40vw] h-[40vw] min-w-[250px] max-w-[450px] min-h-[250px] max-h-[450px] relative z-10 hidden sm:block"
+        ></div>
+
+        <div
+          class="flex items-center gap-5 sm:gap-16 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        >
+          <span
+            class="start-year text-primary text-responsive-big font-bold select-none"
+          ></span>
+          <span
+            class="end-year text-secondary text-responsive-big font-bold select-none"
+          ></span>
+        </div>
+      </section>
+
+      <section class="flex gap-10 flex-col-reverse sm:flex-col">
+        <div class="flex flex-col gap-3 sm:gap-5 px-5 sm:px-14">
+          <p class="navigation-text text-third"></p>
+
+          <div class="flex gap-2 sm:gap-5 items-center">
+            <button
+              class="navigation-prev-button flex items-center justify-center size-8 sm:size-12 rounded-full border border-primary"
+            >
+              <svg
+                width="10"
+                height="14"
+                viewBox="0 0 10 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.49988 0.750001L2.24988 7L8.49988 13.25"
+                  stroke="#42567A"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+            <button
+              class="navigation-next-button flex items-center justify-center size-8 sm:size-12 rounded-full border border-primary"
+            >
+              <svg
+                width="10"
+                height="14"
+                viewBox="0 0 10 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M1.50012 0.750001L7.75012 7L1.50012 13.25"
+                  stroke="#42567A"
+                  stroke-width="2"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="px-5 sm:px-14 relative border-t border-third pt-4 sm:pt-0 sm:border-none"
+        >
+          <div class="swiper max-w-full sm:min-h-32">
+            <div class="swiper-wrapper text-black"></div>
+          </div>
+
+          <button
+            class="button-prev hidden sm:flex items-center justify-center size-8 sm:size-10 rounded-full bg-white absolute left-1 top-1/2 -translate-y-1/2 shadow-sm"
+          >
+            <svg
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M7 1L2 6L7 11" stroke="#3877EE" stroke-width="2" />
+            </svg>
+          </button>
+          <button
+            class="button-next hidden sm:flex items-center justify-center size-8 sm:size-10 rounded-full bg-white absolute right-1 top-1/2 -translate-y-1/2 shadow-sm"
+          >
+            <svg
+              width="8"
+              height="12"
+              viewBox="0 0 8 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M1 1L6 6L1 11" stroke="#3877EE" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <div
+        class="flex sm:hidden pagination absolute bottom-12 left-1/2 -translate-x-1/2 items-center gap-2"
+      ></div>
+
+      <div id="layer" class="absolute top-0 left-0 w-full h-full -z-10"></div>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
